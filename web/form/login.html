@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<form action="http://localhost:9090/login" method="post">
+    <div>用户名: <input type="text" name="username"></div>
+    <div>密码: <input type="password" name="password"></div>
+    <div>昵称: <input type="text" name="nickname"></div>
+    <div>邮箱: <input type="text" name="email"></div>
+    <div>手机号: <input type="text" name="phone"></div>
+    <div>下拉菜单: <select name="fruit">
+            <option value="apple">apple</option> <option value="pear">pear</option> <option value="banane">banane</option> </select></div>
+    <div>单选按钮: <input type="radio" name="gender" value="1">男<input type="radio" name="gender" value="2">女</div>
+    <div>复选框: <input type="checkbox" name="interest" value="football">足球 <input type="checkbox" name="interest" value="basketball">篮球 <input type="checkbox" name="interest" value="tennis">网球</div>
+    <div>日期和时间: <input type="text" name="datetime"></div>
+    <div>身份证号: <input type="text" name="id"></div>
+    <div><input type="hidden" name="token" value="{{.}}"></div>
+    <div><input type="submit" value="提交" style="width: 50px;height: 25px;background: deepskyblue"></div>
+</form>
+</body>
+<style>
+    form {
+        position: relative;
+        left: -500px;
+        display: flex;
+        flex-direction: column;
+    }
+    div {
+        line-height: 2.0;
+        flex: 1;
+        text-align: right;
+    }
+</style>
+</html>
